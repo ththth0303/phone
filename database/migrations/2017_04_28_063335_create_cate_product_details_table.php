@@ -15,7 +15,7 @@ class CreateCateProductDetailsTable extends Migration
     {
         Schema::create('cate_product_details', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('category_id');
+            $table->integer('category_id')->unsigned();
             $table->string('display_size');
             $table->string('os');
             $table->string('front_camera');
