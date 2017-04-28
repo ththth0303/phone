@@ -15,7 +15,7 @@ class CreateDeliversTable extends Migration
     {
         Schema::create('delivers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
+            $table->string('name');
             $table->integer('status');
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned();
