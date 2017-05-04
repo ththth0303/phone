@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+namespace Database\migration;
+
 class Foreignkey extends Migration
 {
     /**
@@ -35,12 +37,12 @@ class Foreignkey extends Migration
         Schema::table('cate_product_details', function (Blueprint $table) {
             $table->foreign('category_id')->references('id')->on('categories');
         });
-       Schema::table('order_details', function (Blueprint $table) {
+        Schema::table('order_details', function (Blueprint $table) {
             $table->foreign('order_id')->references('id')->on('orders');
         });
         Schema::table('order_details', function (Blueprint $table) {
             $table->foreign('product_id')->references('id')->on('products');
-        }); 
+        });
     }
 
     /**
