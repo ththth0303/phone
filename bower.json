@@ -1,0 +1,23 @@
+{
+  "name": "phone",
+  "version": "0.0.0",
+  "authors": [
+    "CongPH"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "boostrap#^3.3.7"
+  },
+  "homepage": "https://github.com/ththth0303/phone",
+  "description": "",
+  "main": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
