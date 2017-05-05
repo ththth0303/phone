@@ -18,7 +18,7 @@ class CreateRatesTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('product_id')->unsigned();
             $table->integer('poin')->unsigned();
-            $table->string('content');
+            $table->string('content')->nullable();
             $table->timestamps();
         });
     }

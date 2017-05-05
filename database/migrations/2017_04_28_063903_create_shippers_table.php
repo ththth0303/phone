@@ -17,7 +17,7 @@ class CreateShippersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('company');
-            $table->integer('status')->unsigned();
+            $table->integer('status')->unsigned()->default(0);
             $table->timestamps();
         });
     }

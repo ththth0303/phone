@@ -18,16 +18,14 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->integer('category_id')->unsigned();
             $table->decimal('price', 10, 0);
-            $table->float('sale_percent');
+            $table->float('sale_percent')->unsigned();
+            $table->float('display_size')->unsigned();
             $table->string('feature_image');
             $table->string('image_list');
-            $table->string('quantity');
-            $table->string('guarantee');
-            $table->integer('color_id');
-            $table->integer('status');
-            $table->integer('created_by')->unsigned();
-            $table->integer('updated_by')->unsigned();
-
+            $table->integer('quantity')->unsigned()->default(0);
+            $table->string('guarantee')->nullable();
+            $table->string('color', 50);
+            $table->integer('internal_memory')->unsigned();
             $table->timestamps();
         });
     }
