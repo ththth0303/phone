@@ -22,6 +22,9 @@ class Foreignkey extends Migration
         Schema::table('comments', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users');
         });
+        Schema::table('comments', function (Blueprint $table) {
+            $table->foreign('product_id')->references('id')->on('products');
+        });
         Schema::table('orders', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users');
         });
@@ -40,6 +43,12 @@ class Foreignkey extends Migration
         });
         Schema::table('order_details', function (Blueprint $table) {
             $table->foreign('product_id')->references('id')->on('products');
+        }); 
+        Schema::table('orders', function (Blueprint $table) {
+            $table->foreign('deliver_id')->references('id')->on('delivers');
+        }); 
+        Schema::table('orders', function (Blueprint $table) {
+            $table->foreign('shipper_id')->references('id')->on('shippers');
         }); 
     }
 
