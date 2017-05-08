@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/index', function () {
+    return view('layouts._client');
+});
+
+Route::get('/admin', function () {
+    return view('layouts._admin');
+});
